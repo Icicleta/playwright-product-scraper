@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright
 
-def get_page_content(url):
+def crawl_books(url):
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
@@ -12,5 +12,3 @@ def get_page_content(url):
         browser.close()
 
         return html
-
-
